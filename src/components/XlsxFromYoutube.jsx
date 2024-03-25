@@ -1,6 +1,8 @@
 import { useState } from "react";
 import * as XLSX from "xlsx";
 import "../styles/example.css"
+import StickyHeadTable from "./StickyHeaderTable";
+import Container from '@mui/material/Container';
 
 function XlsxFromYoutube() {
   const [data, setData] = useState([]);
@@ -25,30 +27,11 @@ function XlsxFromYoutube() {
   };
   return (
     <div>
+      <Container maxWidth="sm">
       <h1>XlsxFromYoutube</h1>
       <input type="file" onChange={handleFileUpload} />
-      <div>
-      {data.length > 0 && (
-        <table className="table">
-          <thead>
-            <tr>
-              {Object.keys(data[0]).map((key) => (
-                <th key={key}>{key}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((row, index) => (
-              <tr key={index}>
-                {Object.values(row).map((value, index) => (
-                  <td key={index}>{value}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-      </div>
+      {data.length > 0 && (<StickyHeadTable />)}
+      </Container>
     </div>
   );
 }
