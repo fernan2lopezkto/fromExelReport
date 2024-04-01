@@ -1,8 +1,17 @@
-# leer archivo desde exel y hacer reporte
+# leer archivo desde exel y hacer un reporte
 
 ## bibliotecas a usar
+- xlsx
+- Material UI
 
+## estructura de páginas
+- Home 
+- página de ejecución de app
+- ajuste
+- ayuda 
 
+### versión 0
+hacer que lea un archivo Excel y muestre los datos de todas hojas y tablas que tenga.
 
 
 # React + Vite
