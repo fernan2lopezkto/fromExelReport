@@ -1,0 +1,27 @@
+Lista de pequeños pasos a seguir o realizados.
+A medida que voy progresando en el desarrollo voy anotando las tareas para que me quede un registro de los pasos y las diferentes tareas que tube que hacer. esto es similar a Trelo
+
+REALIZADO
+- crear projecto github.
+- planear las caracteristicas de las distintas versiones.
+- elegir librerias principales.
+- determinar estructura de las paginas.
+- agregar react router doom
+- crear pagina Home
+- crear pagina Ayuda
+- crear pagina ajustes
+- crear pagina app
+
+
+HACIENDO
+- aprender sobre los temas en Material UI.
+- crear las paginas y estructura mencionada en el readme.
+
+
+PENDIENTE
+- crear footer
+- crear navbar
+- editar componentes generales necesarios.
+- crear al menos dos temas.
+
+

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import * as XLSX from "xlsx";
-import "../styles/example.css"
 import StickyHeadTable from "./StickyHeaderTable";
 import Container from '@mui/material/Container';
 
