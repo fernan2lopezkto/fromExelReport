@@ -18,6 +18,7 @@ import PageNotFound from "./pages/PageNotFound.jsx";
 import PageError from "./pages/PageError.jsx";
 import PageAjustes from "./pages/PageAjustes.jsx";
 import PageApp from "./pages/PageApp.jsx";
+import ResponsiveAppBar from "./components/NavBar.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline>
+        <ResponsiveAppBar />
         <RouterProvider router={router} />
       </CssBaseline>
     </ThemeProvider>
