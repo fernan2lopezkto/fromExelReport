@@ -1,5 +1,6 @@
 import XlsxFromYoutube from "../components/XlsxFromYoutube";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Stack, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
@@ -11,6 +12,11 @@ function HomePage() {
               Home
             </Typography>
           </Grid>
+          <Stack direction="row" spacing={2}>
+            <Link to="app">APP</Link>
+            <Link to="ajustes">ajustes</Link>
+            <Link to="ayuda">ayuda</Link>
+          </Stack>
           <Grid item xs={8}>
             <XlsxFromYoutube />
           </Grid>
