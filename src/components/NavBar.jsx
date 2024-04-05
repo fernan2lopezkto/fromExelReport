@@ -1,7 +1,5 @@
 import * as React from "react";
-
 // ------------------------------------------------------------
-
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,32 +11,22 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-
 // ------------------------------------------------------------
-
-import { NavLink } from "react-router-dom";
-
+import { Link as Enlace } from "react-router-dom";
 // ------------------------------------------------------------
-
 const pages = ["app", "ajustes", "ayuda"];
-
-
 // ------------------------------------------------------------
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  
 
   // ------------------------------------------------------------
 
@@ -50,7 +38,7 @@ function ResponsiveAppBar() {
           <Typography
             variant="h6"
             noWrap
-            component={NavLink}
+            component={Enlace}
             to="/"
             sx={{
               mr: 2,
@@ -98,7 +86,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem
-                  component={NavLink}
+                  component={Enlace}
                   to={page}
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -112,7 +100,7 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component={NavLink}
+            component={Enlace}
             to="/"
             sx={{
               mr: 2,
@@ -130,7 +118,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
             {pages.map((page) => (
               <Button
-                component={NavLink}
+                component={Enlace}
                 to={page}
                 key={page}
                 onClick={handleCloseNavMenu}
