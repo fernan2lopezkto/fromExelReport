@@ -1,4 +1,7 @@
 import * as React from "react";
+
+// ------------------------------------------------------------
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,6 +13,10 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+
+// ------------------------------------------------------------
+
+import { NavLink } from "react-router-dom";
 
 // ------------------------------------------------------------
 
@@ -43,8 +50,8 @@ function ResponsiveAppBar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component={NavLink}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "none", sm: "flex" },
@@ -91,8 +98,8 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem
-                  component="a"
-                  href={page}
+                  component={NavLink}
+                  to={page}
                   key={page}
                   onClick={handleCloseNavMenu}
                 >
@@ -105,8 +112,8 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="/"
+            component={NavLink}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "flex", sm: "none" },
@@ -123,8 +130,8 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
             {pages.map((page) => (
               <Button
-                component="a"
-                href={page}
+                component={NavLink}
+                to={page}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
