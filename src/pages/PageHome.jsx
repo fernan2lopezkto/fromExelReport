@@ -6,7 +6,7 @@ function HomePage() {
     <>
       <Container>
         <Grid container spacing={2} justifyContent="center">
-          <Grid item xs={8} >
+          <Grid item xs={8}>
             <Typography variant="h1" textAlign="center">
               Home
             </Typography>

@@ -1,5 +1,4 @@
 import * as React from "react";
-// ------------------------------------------------------------
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,11 +10,9 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-// ------------------------------------------------------------
-import { Link as Enlace } from "react-router-dom";
-// ------------------------------------------------------------
-const pages = ["app", "ajustes", "ayuda"];
-// ------------------------------------------------------------
+
+const pages = ["Products", "Pricing", "Blog"];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -28,21 +25,20 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
-  // ------------------------------------------------------------
-
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", sm: "flex" }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
-            component={Enlace}
-            to="/"
+            component="a"
+            href="#app-bar-with-responsive-menu"
             sx={{
+              flexGrow: 1,
               mr: 2,
-              display: { xs: "none", sm: "flex" },
+              display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
@@ -52,9 +48,8 @@ function ResponsiveAppBar() {
           >
             E-Report
           </Typography>
-          <Box sx={{ flexGrow: 1 }} />
 
-          <Box sx={{ display: { xs: "flex", sm: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -65,7 +60,6 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
-
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -81,30 +75,25 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", sm: "none" },
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
-                <MenuItem
-                  component={Enlace}
-                  to={page}
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                >
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", sm: "none" }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
-            component={Enlace}
-            to="/"
+            component="a"
+            href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
-              display: { xs: "flex", sm: "none" },
+              display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
@@ -115,11 +104,9 @@ function ResponsiveAppBar() {
           >
             E-R
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                component={Enlace}
-                to={page}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}

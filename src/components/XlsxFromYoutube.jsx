@@ -1,6 +1,5 @@
 import { useState } from "react";
 import * as XLSX from "xlsx";
-import StickyHeadTable from "./StickyHeaderTable";
 import Container from '@mui/material/Container';
 
 function XlsxFromYoutube() {
@@ -29,7 +28,6 @@ function XlsxFromYoutube() {
       <Container maxWidth="sm">
       <h1>XlsxFromYoutube</h1>
       <input type="file" onChange={handleFileUpload} />
-      {data.length > 0 && (<StickyHeadTable />)}
       </Container>
     </div>
   );
