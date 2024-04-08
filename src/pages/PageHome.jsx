@@ -1,9 +1,11 @@
-import { Container, Grid, Stack, Typography } from "@mui/material";
+import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import ResponsiveAppBar from "../components/Apbar";
 
 function HomePage() {
   return (
     <>
+      <ResponsiveAppBar />
       <Container>
         <Grid container spacing={2} justifyContent="center">
           <Grid item xs={8}>
@@ -13,9 +15,15 @@ function HomePage() {
           </Grid>
           <Grid item xs={8}>
             <Stack direction="row" spacing={2} justifyContent="center">
-              <Link to="app">APP</Link>
-              <Link to="ajustes">ajustes</Link>
-              <Link to="ayuda">ayuda</Link>
+              <Button variant="outlined" component={Link} to="/app">
+                APP
+              </Button>
+              <Button variant="outlined" component={Link} to="/ajustes">
+                Ajustes
+              </Button>
+              <Button variant="outlined" component={Link} to="/ayuda">
+                Ayuda
+              </Button>
             </Stack>
           </Grid>
         </Grid>
