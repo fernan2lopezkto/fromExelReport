@@ -34,7 +34,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component={NavLink}
-            to="/"
+            to="/fromExelReport"
             sx={{
               flexGrow: 1,
               mr: 2,
@@ -81,7 +81,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <MenuItem
                   component={NavLink}
-                  to={"/" + page}
+                  to={"/fromExelReport/" + page}
                   key={page}
                   onClick={handleCloseNavMenu}
                 >
@@ -95,7 +95,7 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component={NavLink}
-            to="/"
+            to="/fromExelReport"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -113,7 +113,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 component={NavLink}
-                to={"/" + page}
+                to={"/fromExelReport/" + page}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}

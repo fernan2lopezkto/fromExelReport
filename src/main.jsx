@@ -24,27 +24,27 @@ import PageApp from "./pages/PageApp.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/fromExelReport",
     element: <HomePage />,
     error: <PageError />,
   },
   {
-    path: "/app",
+    path: "/fromExelReport/app",
     element: <PageApp />,
     error: <PageError />,
   },
   {
-    path: "/ajustes",
+    path: "/fromExelReport/ajustes",
     element: <PageAjustes />,
     error: <PageError />,
   },
   {
-    path: "/ayuda",
+    path: "/fromExelReport/ayuda",
     element: <PageAyuda />,
     error: <PageError />,
   },
   {
-    path: "/*",
+    path: "/fromExelReport/*",
     element: <PageNotFound />,
     error: <PageError />,
   },

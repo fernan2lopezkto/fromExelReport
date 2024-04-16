@@ -15,13 +15,13 @@ function HomePage() {
           </Grid>
           <Grid item xs={8}>
             <Stack direction="row" spacing={2} justifyContent="center">
-              <Button variant="outlined" component={Link} to="/app">
+              <Button variant="outlined" component={Link} to="/fromExelReport/app">
                 APP
               </Button>
-              <Button variant="outlined" component={Link} to="/ajustes">
+              <Button variant="outlined" component={Link} to="/fromExelReport/ajustes">
                 Ajustes
               </Button>
-              <Button variant="outlined" component={Link} to="/ayuda">
+              <Button variant="outlined" component={Link} to="/fromExelReport/ayuda">
                 Ayuda
               </Button>
             </Stack>
