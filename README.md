@@ -1,9 +1,29 @@
-# leer archivo desde exel y hacer reporte
+# leer archivo desde exel y hacer un reporte
 
 ## bibliotecas a usar
+- xlsx
+- Material UI
+- react-router-dom
+
+## estructura de páginas
+- Home 
+- página de ejecución de app
+- ajustes
+- ayuda 
+
+### versión 0.0.0
+- hacer que lea un archivo Excel y muestre los datos de todas hojas y tablas que tenga.
+- mostrar datos de una tabla en específico 
+
+### versión 0.0.1
+a lo de la versión anterior sumarle la posibilidad de cruzar 2 tablas en específico 
+
+### versión 0.0.2
+dashboard con análisis de determinada tabla 
+- su ubicación debe quedar guardada con local store, y el seteo de los datos necesarios debe estar configurado en la página de ajustes
 
 
-
+#### cada versión quedara guardada en una branch 
 
 # React + Vite
 
