@@ -1,5 +1,3 @@
-import { useState } from "react";
-import * as XLSX from "xlsx";
 import Container from "@mui/material/Container";
 import { Table, Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
@@ -9,33 +7,10 @@ import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 
-function XlsxFromYoutube() {
-  const [data, setData] = useState([]);
-  const [sheetName, setSheetName] = useState("No sheet name Up");
-
-  const handleFileUpload = (e) => {
-    const reader = new FileReader();
-    reader.readAsBinaryString(e.target.files[0]);
-    reader.onload = (e) => {
-      const data = e.target.result;
-      const workbook = XLSX.read(data, { type: "binary" });
-      const sheetName = workbook.SheetNames[0];
-      const sheet = workbook.Sheets[sheetName];
-      const parsedData = XLSX.utils.sheet_to_json(sheet);
-      console.log(sheet);
-      setSheetName(sheetName);
-      setData(parsedData);
-    };
-  };
-  console.log(sheetName);
-  console.log(data[0]);
+function XlsxFromYoutube(data) {
   return (
     <div>
       <Container>
-        <Typography variant="h2">{sheetName}</Typography>
-
-        <input type="file" onChange={handleFileUpload} />
-
         {data.length > 0 && (
           <TableContainer component={Paper}>
             <Table>
@@ -50,9 +25,12 @@ function XlsxFromYoutube() {
               <TableBody>
                 {data.map((row) => (
                   <TableRow key={row.name}>
-                    {Object.values(row).map((value) => (
-                      <TableCell key={value}>{value}</TableCell>
-                    ))}
+                    {Object.values(row).map(
+                      (value) => (
+                        <TableCell key={value}>{value}</TableCell>
+                      ),
+                      2
+                    )}
                   </TableRow>
                 ))}
               </TableBody>
