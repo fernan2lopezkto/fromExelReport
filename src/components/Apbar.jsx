@@ -46,7 +46,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            E-Report
+            E-R
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
