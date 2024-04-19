@@ -21,7 +21,8 @@ function PageApp() {
       const sheetName = workbook.SheetNames[0];
       const sheet = workbook.Sheets[sheetName];
       const parsedData = XLSX.utils.sheet_to_json(sheet);
-      console.log(sheet);
+      
+    
       setSheetName(sheetName);
       setData(parsedData);
     };
@@ -38,7 +39,7 @@ function PageApp() {
 
         <input type="file" onChange={handleFileUpload} />
         <Grid item xs={8} sx={{ pb: 4, pt: 4 }}>
-          <XlsxFromYoutube data={data} />
+          <XlsxFromYoutube datoss={data} />
         </Grid>
       </Container>
     </>

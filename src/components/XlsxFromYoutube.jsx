@@ -8,29 +8,31 @@ import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 
 function XlsxFromYoutube(data) {
+  
+  const cabecera = data.datoss[0];
+
   return (
     <div>
       <Container>
-        {data.length > 0 && (
+        {data.datoss.length > 0 && (
           <TableContainer component={Paper}>
             <Table>
               <TableHead>
-                <TableRow>
-                  {Object.values(data[0]).map((value) => (
-                    <TableCell key={value}>{value}</TableCell>
+                <TableRow
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  {Object.keys(cabecera).map((key) => (
+                    <TableCell key={key}>{key}</TableCell>
                   ))}
                 </TableRow>
               </TableHead>
 
               <TableBody>
-                {data.map((row) => (
+                {data.datoss.map((row) => (
                   <TableRow key={row.name}>
-                    {Object.values(row).map(
-                      (value) => (
-                        <TableCell key={value}>{value}</TableCell>
-                      ),
-                      2
-                    )}
+                    {Object.values(row).map((value) => (
+                      <TableCell key={value}>{value}</TableCell>
+                    ))}
                   </TableRow>
                 ))}
               </TableBody>
