@@ -2,7 +2,7 @@
 
 ## link de la página
 
-`<a href="https://fernan2lopezkto.github.io/fromExelReport/">`Exel Report`</a>`
+<a href="https://fernan2lopezkto.github.io/fromExelReport/">Exel Report</a>
 
 ## bibliotecas a usar
 
